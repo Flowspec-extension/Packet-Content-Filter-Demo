@@ -46,13 +46,13 @@ For more details, please refer to the *[draft](https://datatracker.ietf.org/doc/
 Limitations & Contributing
 --------------------------
 
-OpenBGPD currently supports announcement of flowspec rules, but does not support reception, analysis, and forwarding. 
+OpenBGPD currently supports announcement of flowspec rules, but does not support withdrawal, reception, analysis, and forwarding. 
 In order to quickly verify, FRRouting was used as the client to receive, analyze, and forward. 
 And we will improve OpenBGPD's support for Packet Content Filter in the future.
 
-In the future, we will add the following adaptations and functions: 
+In the future, we will try to add the following adaptations and functions: 
 * Using **bgpd.conf** to send flowspec command and announcement containing packet content filter rules
-* Adding flowspec withdraw function to OpenBGPD part(so currently, we have to **restart** FRR service to flush the Netfilter)
+* Flowspec withdrawal function for OpenBGPD part(so currently, we have to **restart** FRR service to flush the Netfilter)
 * Analyzing and implementing **IPv6** packet content filter rules using Netfilter(only **IPv4** supported now)
 * Sorting the packet content filter rules received according to the draft(so presently, it is better to input commands in **descending** order of priority)
 
