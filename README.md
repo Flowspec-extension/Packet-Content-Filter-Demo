@@ -52,6 +52,7 @@ And we will improve OpenBGPD's support for Packet Content Filter in the future.
 
 In the future, we will add the following adaptations and functions: 
 * Using **bgpd.conf** to send flowspec command and announcement containing packet content filter rules
+* Adding flowspec withdraw function to OpenBGPD part(so currently, we have to **restart** FRR service to flush the Netfilter)
 * Analyzing and implementing **IPv6** packet content filter rules using Netfilter(only **IPv4** supported now)
 * Sorting the packet content filter rules received according to the draft(so presently, it is better to input commands in **descending** order of priority)
 
